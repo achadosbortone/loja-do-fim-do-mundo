@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Checklist do kit de 72 horas — Loja do Fim do Mundo</title>
+<meta name="description" content="Checklist prático para ficar 72 horas sem água, energia e internet: o que guardar, quanto e onde achar.">
+<meta property="og:title" content="Checklist do kit de 72 horas — Loja do Fim do Mundo">
+<meta property="og:description" content="Estar preparado dá tranquilidade.">
+<meta property="og:image" content="https://achadosbortone.github.io/loja-do-fim-do-mundo/og.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2313110c'/%3E%3Cpath d='M32 12 8 52h48z' fill='%23ff8a1f'/%3E%3Cpath d='M32 28 22 52h20z' fill='%2313110c'/%3E%3C/svg%3E">
+<style>
+:root{--bg:#13110c;--panel:#1d1a13;--line:#383024;--tx:#efe8d8;--mut:#a79f8b;--ac:#ff8a1f;--ol:#9cb14e;--warn:#2a2114}
+*{box-sizing:border-box;margin:0}
+body{background:radial-gradient(900px 400px at 80% -10%,#2a2214,transparent),var(--bg);color:var(--tx);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;min-height:100vh}
+a{color:var(--ac)}
+.wrap{max-width:820px;margin:0 auto;padding:24px 16px 40px}
+h1{font-size:clamp(24px,5vw,34px);color:var(--ac);margin-bottom:4px}
+.sub{color:var(--mut);margin-bottom:16px}
+.nav{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+.nav a,.nav button{border:1px solid var(--line);background:var(--panel);color:var(--tx);padding:8px 14px;border-radius:999px;font-size:14px;cursor:pointer;text-decoration:none;font-family:inherit}
+.nav a:hover,.nav button:hover{border-color:var(--ol);color:var(--ol)}
+.nota{background:var(--warn);border:1px solid #5a4520;border-left:5px solid var(--ac);border-radius:12px;padding:12px 16px;font-size:14px;color:#ecdcb8;margin-bottom:18px}
+.nota strong{color:var(--ac)}
+.bloco{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin-bottom:14px}
+.bloco h2{font-size:18px;margin-bottom:2px}
+.bloco .dica{color:var(--mut);font-size:13px;margin-bottom:8px}
+.item{display:flex;gap:10px;align-items:flex-start;padding:6px 0;border-top:1px solid var(--line)}
+.item:first-of-type{border-top:0}
+.item input{margin-top:5px;width:18px;height:18px;accent-color:var(--ac);flex:none}
+.item label{flex:1;cursor:pointer}
+.item small{display:block;color:var(--mut);font-size:12px}
+.ver{font-size:13px;white-space:nowrap}
+.prog{color:var(--ol);font-size:14px;margin-bottom:14px}
+footer{color:var(--mut);font-size:13px;text-align:center;padding:10px 16px 34px;max-width:760px;margin:0 auto}
+footer p{margin:6px 0}
+@media print{
+  body{background:#fff;color:#000}
+  .nav,.ver{display:none}
+  .bloco,.nota{background:#fff;border-color:#999;color:#000}
+  h1,.nota strong{color:#000}
+  .item small,.sub,.dica,.prog{color:#333}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Checklist do kit de 72 horas</h1>
+  <p class="sub">Para ficar até 3 dias sem água encanada, energia e internet. Marque o que você já tem; o progresso fica salvo neste aparelho.</p>
+  <div class="nav">
+    <a href="index.html">← Voltar à vitrine</a>
+    <button type="button" id="imprimir">🖨️ Imprimir</button>
+    <button type="button" id="limpar">Limpar marcações</button>
+  </div>
+  <div class="nota"><strong>Dica geral:</strong> as quantidades abaixo são por pessoa e servem como ponto de partida. Adapte à sua família, a bebês, idosos e animais de estimação. Esta página <strong>não substitui a orientação da Defesa Civil</strong> (telefone 199).</div>
+  <p class="prog" id="prog"></p>
+  <div id="lista"></div>
+  <footer>
+    <p>Em emergências: 192 (SAMU) · 193 (Bombeiros) · 190 (Polícia) · 199 (Defesa Civil).</p>
+    <p>Revise o kit a cada 6 meses: troque pilhas, confira validades e recarregue baterias.</p>
+    <p><strong>Aviso de afiliado:</strong> os links da vitrine são de afiliado. Ao comprar por eles, posso receber uma pequena comissão, sem nenhum custo extra para você.</p>
+  </footer>
+</div>
+<script>
+const BLOCOS=[
+ {t:"💧 Água",cat:"agua",d:"A base de tudo. Cerca de 3 litros por pessoa por dia (beber, cozinhar e higiene básica).",i:[
+  ["Água potável armazenada","3 litros por pessoa por dia × 3 dias, em garrafas ou galões próprios para água"],
+  ["Filtro portátil ou pastilhas purificadoras","Leia o que o filtro realmente remove; na dúvida, ferva por 1 minuto"],
+  ["Recipiente dobrável ou balde com tampa","Para reserva extra quando houver aviso de falta d'água"]]},
+ {t:"🥫 Alimentos",cat:"alimentos",d:"Escolha o que você já come, que não precise de geladeira nem de muita água.",i:[
+  ["Enlatados e conservas","Atum, sardinha, feijão, milho; não esqueça o abridor manual"],
+  ["Barras de cereal, castanhas, biscoitos","Prontos para comer, longa validade"],
+  ["Arroz, macarrão, leite em pó","Se tiver fogareiro e água para cozinhar"],
+  ["Refeições liofilizadas (opcional)","Leves e práticas; confira a validade"],
+  ["Alimentos para bebês, idosos e pets","Se houver; separe a parte deles"]]},
+ {t:"⚡ Energia e luz",cat:"energia",d:"Celular carregado ajuda a receber avisos e pedir ajuda.",i:[
+  ["Power bank de marca conhecida, carregado","Recarregue todo mês"],
+  ["Lanterna LED (uma por pessoa)","De preferência com pilhas extras ou recarregável"],
+  ["Lampião LED ou luminária de emergência","Evite velas; se usar, apoio firme e nunca sem supervisão"],
+  ["Pilhas extras ou carregador de pilhas","Confira o tamanho que seus aparelhos usam"]]},
+ {t:"📻 Comunicação sem internet",cat:"comunicacao",d:"Quando a internet e o celular caem, o rádio continua.",i:[
+  ["Rádio AM/FM a pilha, manivela ou solar","Para ouvir avisos oficiais"],
+  ["Lista de telefones em papel","Família, vizinhos, 199, 192, 193, 190"],
+  ["Apito","Para sinalizar sua posição"],
+  ["Ponto de encontro combinado com a família","Perto de casa e outro mais distante"]]},
+ {t:"🔥 Cozinha e fogo",cat:"cozinha",d:"Só use fogo e gás em local ventilado.",i:[
+  ["Fogareiro de camping com gás extra","NUNCA dentro de barraca, carro ou ambiente fechado"],
+  ["Panela, caneca e talheres simples","Leves e fáceis de lavar"],
+  ["Acendedor e fósforos à prova d'água","Guarde em local seco"]]},
+ {t:"🩹 Primeiros socorros e higiene",cat:"saude",d:"Itens sem medicamentos aqui; seus remédios de uso contínuo ficam à parte.",i:[
+  ["Estojo de primeiros socorros","Curativos, gaze, atadura, luvas, tesoura"],
+  ["Seus remédios de uso contínuo (7 dias, se possível)","Com receita e validade conferida"],
+  ["Álcool em gel, sabão, lenços umedecidos","Higiene sem água corrente"],
+  ["Papel higiênico e sacos de lixo","Itens simples que fazem falta"],
+  ["Máscaras PFF2 e manta térmica","Poeira, fumaça e frio"]]},
+ {t:"🏕️ Abrigo e conforto",cat:"abrigo",d:"Para dormir, se proteger de chuva, frio e calor.",i:[
+  ["Cobertores, mantas ou sacos de dormir","Um por pessoa"],
+  ["Capa de chuva ou poncho","Um por pessoa"],
+  ["Colchonete ou isolante","Evita o frio do chão"],
+  ["Ventilador portátil recarregável e mosquiteiro","Para dias quentes sem energia"]]},
+ {t:"🎒 Mochila de emergência (go bag)",cat:"mochilas",d:"Pronta perto da porta, caso precise sair de casa.",i:[
+  ["Mochila resistente por pessoa","Com roupa de troca, lanterna e água"],
+  ["Cópias de documentos em saco impermeável","RG, CPF, comprovantes, cartão de vacina"],
+  ["Dinheiro em notas pequenas","Caixas eletrônicos podem não funcionar"],
+  ["Chaves reserva e carregador do celular","Guarde na mochila"]]},
+ {t:"🔧 Ferramentas",cat:"ferramentas",d:"Pequenas coisas que resolvem muita coisa.",i:[
+  ["Multiferramenta ou alicate","Uso comum"],
+  ["Fita multiuso e fita isolante","Consertos rápidos"],
+  ["Corda resistente e kit de costura","Improvisos úteis"]]},
+ {t:"🧯 Segurança em casa",cat:"casa",d:"Prevenção reduz muito o risco.",i:[
+  ["Extintor com validade em dia","Perto da cozinha"],
+  ["Detector de fumaça (e de gás, se usar botijão)","Teste uma vez por mês"],
+  ["Saber onde fica o registro de gás, luz e água","Para fechar em caso de emergência"]]}
+];
+const KEY="planob_checklist_v1";
+let marcado={};
+try{marcado=JSON.parse(localStorage.getItem(KEY)||"{}")}catch(e){marcado={}}
+const salvar=()=>{try{localStorage.setItem(KEY,JSON.stringify(marcado))}catch(e){}};
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+let total=0;
+const html=BLOCOS.map((b,bi)=>`<section class="bloco"><h2>${esc(b.t)}</h2><p class="dica">${esc(b.d)} <a class="ver" href="index.html#${b.cat}">Ver ofertas →</a></p>`+
+ b.i.map((it,ii)=>{total++;const id=`c${bi}_${ii}`;return `<div class="item"><input type="checkbox" id="${id}" data-id="${id}"><label for="${id}">${esc(it[0])}<small>${esc(it[1])}</small></label></div>`}).join("")+`</section>`).join("");
+document.getElementById("lista").innerHTML=html;
+function atualiza(){const n=Object.values(marcado).filter(Boolean).length;document.getElementById("prog").textContent=`Progresso: ${n} de ${total} itens`}
+document.querySelectorAll("input[data-id]").forEach(el=>{el.checked=!!marcado[el.dataset.id];el.onchange=()=>{marcado[el.dataset.id]=el.checked;salvar();atualiza()}});
+document.getElementById("limpar").onclick=()=>{marcado={};salvar();document.querySelectorAll("input[data-id]").forEach(el=>el.checked=false);atualiza()};
+document.getElementById("imprimir").onclick=()=>window.print();
+atualiza();
+</script>
+</body>
+</html>
